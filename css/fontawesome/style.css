@@ -1,0 +1,693 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #252522;
+}
+
+/*---------------------  NAVEGADOR --------------------------------*/
+  
+.navbar-brand img {
+    height: 100px;
+    width: 100px;
+}
+
+.navbar-toggler-icon {
+    background-color: #fefefe;}
+
+.nav-item {
+    margin: 0 1em;
+}
+.nav-link {
+    color: #252525;
+}
+.nav-link:hover {
+    color: #e0942f;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #e0942f !important;
+    font-weight: bold;
+}
+
+button.navbar-toggler {
+background-color: #e0942f;
+}
+
+
+#buttonInstall {  padding: 10px 20px;
+    background-color: orange;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#buttonInstall:hover {
+    color: #e0942f;
+    background-color: #fff;
+    border:1px solid #e0942f;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.233);
+}
+
+/* BUSCADOR DE RECETAS */
+
+
+#search {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+}
+
+#search h1 {color: #fff; font-size: 36px; text-align: center;}
+#search p {color: #fff; margin-bottom: 1.5em; font-size: 20px; text-align: center;}
+
+.search-icon {
+    position: absolute;
+    right: 20px; 
+    top: 85%; 
+    transform: translateY(-50%); 
+    z-index: 2; 
+    color: #e0942f;
+    font-size: 20px;
+}
+
+#input {
+    width: 600px;
+    height: 50px;
+    padding-left: 20px;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    border-radius: 10px;
+    z-index: 2; 
+}
+
+#input:focus {
+ border: 1px solid orange;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 166, 0, 0.589);
+}
+
+.background-banner {
+    background: url(../img/banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 80px);
+position: relative;}
+
+/* NOTIFICACION - FAVORITOS */
+
+.recetas-favoritas {
+    background: url(../img/banner-favoritos.jpg) no-repeat;
+  background-size: cover;}
+
+.recetas-favoritas h2 {text-align: center; 
+    color: #fff; 
+    padding: 4em 0;
+    text-shadow: 2px 2px 4px #e0942f;}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin: 2em;
+      }
+      
+.small-card {
+  width: 20%; 
+  margin: 10px;
+      }
+
+  .favorites-button::before {
+    content: '\2606'; 
+    font-size: 1.5em;
+    margin-right: 0.5em;
+  }
+  
+  .favorites-button.active::before {
+    content: '\2605'; 
+    color: gold; 
+  }
+
+.favorites-button {
+display: block; 
+margin: 2em auto;
+width: 50%;
+background-color: #009e15;
+color: #fff;
+border: 1px solid #fff;
+position: relative;
+}
+.favorites-button:hover {
+    background-color: #fff;
+    color: #009e15;
+    border: 1px solid #009e15;
+}
+
+/* Estilo para la tarjeta favorita */
+.favorita {
+    position: relative;
+  }
+  
+  .favorita .heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    color: red;
+    background-color: #fefefe;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+#notification {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #009e15ce;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+    z-index: 9999; 
+  }
+
+.fa-solid {
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+/* ----------------- BUSCADOR DE RECETAS DESDE LA BOTONERA --------- */
+
+.contenedor h2 {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.contenedor p {
+    text-align: center;
+    font-weight: 400;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+.recetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1.5rem;
+    margin: 2em;
+}
+
+.category-buttons {
+    border-radius: 5%;
+    background-color: #e0942f;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    justify-content: space-between;
+    box-shadow: 0px 17px 38px 0px rgba(0,0,0,0.24);
+    margin: 4em 2em;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+background-color: #e0942f;
+border: none;
+padding: 1em;
+}
+
+.btn-primary:hover {
+    color:rgb(245, 141, 22);
+    background-color: #fefefe;
+    border: 1px solid #e0942f;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/*Contenedor de detalles e instrucciones de la receta */
+
+.detallesReceta {
+    margin: 0 auto;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detallesReceta img {
+    max-width: 100%;
+    order: -1;
+}
+.detallesReceta h4 {
+margin-top: 1em;
+text-align: center;
+padding: 0 2em;
+}
+.detallesReceta p {
+padding: 1em 2em;
+padding-bottom: 2em;
+text-align: left;
+}
+
+.details-button {
+    padding: 10px 15px;
+    margin-top: 1em;
+}
+
+.title-detalle {
+    font-family: 'Lato';
+    font-weight: 600;
+    font-size: 24px;
+    border-bottom: 2px solid #a1a1a1;
+    margin-bottom: 1em;
+}
+
+.recipe-details {
+display: grid;
+grid-template-columns: 100%;
+}
+
+/* ----------- Sección Aprender ---------- */
+
+.background-aprender {
+    background: url(../img/banner-aprender.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px);
+    position: relative;
+}
+
+.titulo-aprender {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.titulo-aprender h1 { text-shadow: 2px 2px 4px #e0942f; color: #fff; font-size: 36px;}
+.titulo-aprender p {color: #fff; font-size: 24px;}
+.flecha-aprender {color: #e0942f; font-size: 40px; margin-top: 10px; }
+.flecha-aprender:hover {color: #fff; transition: 1.1s all;}
+.primer-paso {text-align: center; margin: 4em 0; padding: 0 6em;}
+.primer-paso h2 {font-size: 1.8rem;}
+.primer-paso p {margin-bottom: 2em;}
+.primer-paso iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-container {
+    display: flex;
+    background-color: #292929;
+    padding: 4em 6em;
+}
+  .container-info {
+    flex: 1; 
+    padding-right: 3em; 
+    color: #fff;
+  }
+  .container-info h2 {margin-bottom: 1.5em;line-height: 3rem;}
+  .container-info p {line-height: 2rem; margin-bottom: 3em;}
+
+  .image-gallery {
+    flex: 1; /* La segunda parte (galería de imágenes) también ocupará el 50% del espacio disponible */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(2, 1fr); /* Dos filas */
+    gap: 10px; /* Espaciado entre imágenes */
+  }
+  
+  .image-gallery img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /
+  }
+
+  .button-aprender {
+    padding: 15px 30px; 
+    background-color: #e0942f; 
+    color: #fff; 
+    border-radius: 15px; 
+    border: 1px solid #e0942f;
+}
+.button-aprender:hover {text-decoration: none; 
+    background-color: transparent; 
+    color: #fff; border: 1px solid #fff; 
+    transition: 0.5s;}
+
+.article-consejos h2 {text-align: center; margin: 2em 0; font-size: 1.8rem;}
+.article-consejos {text-align: left; margin: 4em 0;}
+.icono-consejo {font-size: 3em; color: #e0942f; margin-bottom: 30px;}
+.col h3 {margin-bottom: 20px; font-size: 1.5rem;}
+
+/* -------- Testimonios ------ */
+.background-testimonios {
+background-color: #292929;
+padding: 4em 6em;}
+.background-testimonios h2 {text-align: center; color: #fff;}
+.background-testimonios h3 {margin: 20px 0;}
+.background-testimonios p {margin-top: 20px;}
+.fa-star {color: gold;}
+
+/* --------------------- FOOTER ---------------- */
+
+footer h2 {font-size:20px; margin-bottom: 20px;}
+
+a { color: white;
+    text-decoration: none; }
+a:hover {color: #ADB1B7}
+
+.ul-footer {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+ul li a:hover {color: #ADB1B7
+}
+.ul-footer li {margin-bottom: 12px;}
+
+#containerFooter
+{
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 15px 50px;
+    box-sizing: border-box;
+}
+
+.webFooter
+{
+    padding-top: 30px;
+    font-size: 12px;
+} 
+
+#credit 
+{
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.separador-credit {
+    margin: 0 15px;
+}
+
+#credit a
+{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+#credit a::after
+{
+content: "";
+background: white;
+mix-blend-mode: exclusion;
+width: calc(100% + 18px);
+height: 0;
+position: absolute;
+bottom: -4px;
+left: -10px;
+transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#credit a:hover::after
+{ height: calc(100% + 8px)}
+
+
+/* ------ Boton flotante - Compartir ------ */
+
+#boton-flotante {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #25D366;
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  #boton-flotante:hover {box-shadow: 0px 0px 10px rgba(53, 165, 1, 0.397);}
+  .navbar-toggler {
+    margin-right: 15px; /* Espacio entre el logo y el botón de hamburguesa */
+    z-index: 1100; /* Ajusta el valor según sea necesario */
+  }
+
+  
+  @media (max-width: 990px) {
+    .navbar-toggler-icon {background-color: transparent;}
+  }
+
+/* ---------------------------- MEDIA QUERY TABLET ---------------------- */
+
+@media (max-width: 768px) {
+  
+    /* ---------------------  NAVEGADOR --------------------------------*/
+  
+    .navbar-brand img {
+      height: 80px; 
+      width: auto;
+    }
+  
+    .nav-item {
+      margin: 0 0.5em; 
+    }
+    .nav-link {margin-bottom: 15px;}
+
+    .recetas {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+    /* BUSCADOR DE RECETAS */
+  
+    #input {
+      width: 320px;
+    }
+  
+    .search-icon {position: absolute;
+    top: 90%;}
+
+    .detallesReceta {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .detallesReceta h4 {
+      margin-top: 0.5em;
+    }
+  
+    .detallesReceta p {
+      padding: 1em;
+      text-align: center;
+    }
+  
+    .details-button {
+      margin-top: 0.5em;
+    }
+  
+    .primer-paso {
+      margin: 2em 0;
+      padding: 0 2em;
+    }
+  
+    /* Footer */
+    #containerFooter {
+      grid-template-columns: 1fr 1fr; 
+      padding: 15px 50px; 
+      gap: 5px;
+  }
+
+  .webFooter {
+      width: 100%; 
+      margin-bottom: 20px;
+  }
+  
+    /* Botón flotante - Compartir */
+    #boton-flotante {
+      bottom: 10px; 
+      right: 10px; 
+      padding: 8px 15px; 
+    }
+  
+    #boton-flotante:hover {
+      box-shadow: 0px 0px 10px rgba(53, 165, 1, 0.397);
+    }
+
+    /* APRENDER HTML */ 
+
+    .article-container {
+        flex-direction: column;
+      }
+    
+      .container-info {
+        padding-right: 0;
+        padding-bottom: 20px;
+      }
+    
+      .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+      }
+    
+      .button-aprender {
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      .article-consejos .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+  }
+  
+  @media(max-width: 480px) {
+
+    /* NAVEGADOR */
+    .navbar-brand img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .nav-item {
+        margin: 0.5em;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+        font-weight: normal;
+    }
+
+    button.navbar-toggler {
+        background-color: #e0942f;
+    }
+
+    #buttonInstall {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .titulo-aprender {padding: 20px;}
+    .titulo-aprender p {
+      text-align: center;
+    }
+
+    .article-container {
+      padding: 30px;
+    }
+
+    .primer-paso h2 {
+      margin: 40px 0;
+      font-weight: 600;
+    }
+
+    .article-cocina p{
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 5px
+    }
+    .article-cocina h3 {
+      font-weight: 600;
+    }
+
+    .article-consejos h2 {
+      padding: 0 20px;
+      font-weight: 600;
+    }
+
+    p {text-align: left;}
+
+    #notification {
+        bottom: 20px;
+    }
+
+    /* CONTENEDOR DE RECETAS */
+    .recetas {
+        grid-template-columns: 1fr;
+    }
+
+    /* TARJETAS DE RECETAS */
+    .small-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .favorites-button {
+        width: 100%;
+        margin: 1em auto;
+    }
+
+    /* TARJETA FAVORITA */
+    .favorita .heart-icon {
+        top: 5px;
+        right: 5px;
+        font-size: 16px;
+    }
+
+    /* BOTÓN FLOTANTE */
+    #boton-flotante {
+        font-size: 14px;
+        padding: 8px 16px;
+        right: 10px;
+        bottom: 10px;
+    }
+    .image-gallery {
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+      }
+
+      .article-consejos .row {
+        grid-template-columns: 1fr;
+      }
+
+      .background-testimonios h2 {
+        margin: 30px 0;
+      }
+      .background-testimonios {
+        padding: 30px;
+      }
+      .card-testimonio {margin-bottom: 25px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+
+      /* FOOTER */ 
+      #containerFooter {
+        grid-template-columns: 1fr; 
+        gap: 1px;
+    }
+}
+
+
+
