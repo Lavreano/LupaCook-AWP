@@ -388,10 +388,10 @@ ul li a:hover {color: #ADB1B7
     letter-spacing: 1px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 60px;
+    gap: 20px;
     text-transform: uppercase;
     font-size: 15px;
-    padding: 15px 200px;
+    padding: 15px 50px;
     box-sizing: border-box;
 }
 
@@ -487,7 +487,7 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     /* BUSCADOR DE RECETAS */
   
     #input {
-      width: 400px;
+      width: 320px;
     }
   
     .search-icon {position: absolute;
@@ -520,10 +520,15 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   
     /* Footer */
     #containerFooter {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px; 
-      padding: 15px; 
-    }
+      grid-template-columns: 1fr 1fr; 
+      padding: 15px 50px; 
+      gap: 5px;
+  }
+
+  .webFooter {
+      width: 100%; 
+      margin-bottom: 20px;
+  }
   
     /* Botón flotante - Compartir */
     #boton-flotante {
@@ -595,6 +600,34 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         font-size: 14px;
     }
 
+    .titulo-aprender {padding: 20px;}
+    .titulo-aprender p {
+      text-align: center;
+    }
+
+    .article-container {
+      padding: 30px;
+    }
+
+    .primer-paso h2 {
+      margin: 40px 0;
+      font-weight: 600;
+    }
+
+    .article-cocina p{
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 5px
+    }
+    .article-cocina h3 {
+      font-weight: 600;
+    }
+
+    .article-consejos h2 {
+      padding: 0 20px;
+      font-weight: 600;
+    }
+
     p {text-align: left;}
 
     #notification {
@@ -624,12 +657,6 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         font-size: 16px;
     }
 
-    /* FOOTER */
-    #containerFooter {
-        grid-template-columns: 1fr;
-        padding: 15px;
-    }
-
     /* BOTÓN FLOTANTE */
     #boton-flotante {
         font-size: 14px;
@@ -645,6 +672,21 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
       .article-consejos .row {
         grid-template-columns: 1fr;
       }
+
+      .background-testimonios h2 {
+        margin: 30px 0;
+      }
+      .background-testimonios {
+        padding: 30px;
+      }
+      .card-testimonio {margin-bottom: 25px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+
+      /* FOOTER */ 
+      #containerFooter {
+        grid-template-columns: 1fr; 
+        gap: 1px;
+    }
 }
 
 
